@@ -90,18 +90,20 @@ class IntroductionScreen extends StatelessWidget {
                               'Empower your day, conquer your tasks, and\nseize every moment with our powerful\nToDoList app.',
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
-                              textColor: Color(0xFF524B6B),
+                              textColor: textColor,
                             ),
                           ),
                         ),
                       ),
                       const Spacer(flex: 1),
                       SizedBox(
-                        height: heightButton,
+                        height: theme.buttonTheme.height,
                         width: double.infinity,
                         child: ButtonApp(
                           text: 'Get Started',
-                          onPressed: () {},
+                          onPressed: () {
+                            GoRouter.of(context).go(AppRoutes.login.path);
+                          },
                         ),
                       ),
                     ],

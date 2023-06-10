@@ -8,7 +8,8 @@ class ButtonApp extends StatelessWidget {
     this.fontSize = 14.0,
     this.backgroundColor = primaryColor,
     this.textColor = whiteColor,
-    required this.onPressed,
+    this.onPressed,
+    this.letterSpacing,
   });
   //
   final String text;
@@ -21,15 +22,23 @@ class ButtonApp extends StatelessWidget {
 
   final Color textColor;
 
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
+
+  final double? letterSpacing;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
       style: ButtonStyle(
+        padding: const MaterialStatePropertyAll(
+          EdgeInsets.symmetric(
+            vertical: paddingSize / 2,
+            horizontal: paddingSize - 7,
+          ),
+        ),
         backgroundColor: MaterialStatePropertyAll(backgroundColor),
-        elevation: const MaterialStatePropertyAll(4.0),
+        elevation: const MaterialStatePropertyAll(.0),
       ),
       child: Text(
         text,
@@ -38,6 +47,7 @@ class ButtonApp extends StatelessWidget {
           fontWeight: fontWeight,
           fontSize: fontSize,
           color: textColor,
+          letterSpacing: letterSpacing,
         ),
       ),
     );

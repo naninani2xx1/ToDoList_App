@@ -8,6 +8,8 @@ class TextApp extends StatelessWidget {
     this.fontWeight = FontWeight.w400,
     this.fontSize = 14.0,
     this.height,
+    this.textAlign = TextAlign.left,
+    this.maxLines,
   });
 
   final String text;
@@ -19,6 +21,10 @@ class TextApp extends StatelessWidget {
   final double fontSize;
 
   final double? height;
+
+  final TextAlign textAlign;
+
+  final int? maxLines;
   @override
   Widget build(BuildContext context) {
     return Text(
@@ -30,6 +36,9 @@ class TextApp extends StatelessWidget {
         fontSize: fontSize,
         height: height,
       ),
+      textAlign: textAlign,
+      maxLines: maxLines,
+      overflow: maxLines == null ? null : TextOverflow.ellipsis,
     );
   }
 }

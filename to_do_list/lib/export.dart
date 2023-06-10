@@ -13,3 +13,13 @@ export 'package:to_do_list/common/widgets/text_widget.dart';
 export 'package:flutter_svg/flutter_svg.dart';
 export 'package:to_do_list/config/svg.dart';
 export 'package:to_do_list/config/sizes.dart';
+export 'package:to_do_list/config/theme.dart';
+export 'package:to_do_list/utils/extensions/string_x.dart';
+export 'package:to_do_list/common/widgets/check_box.dart';
+export 'package:to_do_list/src/dependency_injection.dart';
+export 'package:flutter_bloc/flutter_bloc.dart';
+export 'package:to_do_list/utils/toast/toast.dart';
+export 'package:to_do_list/utils/alert/loading.dart';
+
+typedef OnChangeValueForm = void Function(String);
+typedef OnChangeValueBox = void Function(bool);

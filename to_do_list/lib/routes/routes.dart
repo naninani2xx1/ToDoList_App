@@ -7,6 +7,26 @@ enum AppRoutes {
   login(
     name: 'login',
     path: '/login',
+  ),
+
+  signUp(
+    name: 'signUp',
+    path: '/signUp',
+  ),
+
+  checkYourEmail(
+    name: 'checkYourEmail',
+    path: 'checkYourEmail',
+  ),
+
+  dashboard(
+    name: 'dashboard',
+    path: '/dashboard',
+  ),
+
+  forgotPassword(
+    name: 'forgotPassword',
+    path: '/forgotPassword',
   );
 
   const AppRoutes({
